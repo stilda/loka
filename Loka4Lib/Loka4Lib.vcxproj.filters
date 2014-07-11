@@ -15,15 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="LinearAlgebra.h">
+    <ClInclude Include="Loka4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loka4math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Loka4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loka4math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
