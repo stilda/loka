@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Loka4.h"
 #include <cmath>
 #include <cassert>

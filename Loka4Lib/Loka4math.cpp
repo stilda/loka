@@ -1,30 +1,31 @@
 #include "Loka4math.h"
-#include "Vector3.h"
+#include <cmath>
+//#include "Vector3.h"
 
-using namespace Vector3;
+//using namespace Vector3;
 
 namespace Loka4
 {
-	const static Vect3d ortA = normalize( Vect3d(1,-1,-1) );
-	const static Vect3d ortB = normalize( Vect3d(-1,1,-1) );
-	const static Vect3d ortC = normalize( Vect3d(-1,-1,1) );
-	const static Vect3d ortE = normalize( Vect3d(1,1,1) );
+//	const static Vect3d ortA = normalize( Vect3d(1,-1,-1) );
+//	const static Vect3d ortB = normalize( Vect3d(-1,1,-1) );
+//	const static Vect3d ortC = normalize( Vect3d(-1,-1,1) );
+//	const static Vect3d ortE = normalize( Vect3d(1,1,1) );
 
 	const L4 normalize( const L4 & n )
 	{
 		return n / norm(n);
 	}
 
-	Vect3d L4_to_vect( const L4 & n )
-	{
-		return ortA*n.a() + ortB*n.b() + ortC*n.c() + ortE*n.e();
-	}
+//	Vect3d L4_to_vect( const L4 & n )
+//	{
+//		return ortA*n.a() + ortB*n.b() + ortC*n.c() + ortE*n.e();
+//	}
 
-	L4 vect_to_L4( const Vect3d & v )
-	{
-		throw "vect_to_L4 not implemented";
-		return L4();
-	}
+//	L4 vect_to_L4( const Vect3d & v )
+//	{
+//		throw "vect_to_L4 not implemented";
+//		return L4();
+//	}
 
 	double exponent_period()
 	{
@@ -34,12 +35,12 @@ namespace Loka4
 
 	bool near_equal( const L4 & n1, const L4 & n2, const double tol /*= 1e-12*/ )
 	{
-		return (fabs(n1.a()-n2.a()) < tol) && (fabs(n1.b()-n2.b()) < tol) && (fabs(n1.c()-n2.c()) < tol) && (fabs(n1.e()-n2.e()) < tol);
+		return (std::abs(n1.a()-n2.a()) < tol) && (std::abs(n1.b()-n2.b()) < tol) && (std::abs(n1.c()-n2.c()) < tol) && (std::abs(n1.e()-n2.e()) < tol);
 	}
 
 	bool near_zero( const L4 & n1, const double tol /*= 1e-12*/ )
 	{
-		return (fabs(n1.a()) < tol) && (fabs(n1.b()) < tol) && (fabs(n1.c()) < tol) && (fabs(n1.e()) < tol);
+		return (std::abs(n1.a()) < tol) && (std::abs(n1.b()) < tol) && (std::abs(n1.c()) < tol) && (std::abs(n1.e()) < tol);
 	}
 
 	L4 exponent( const L4 & n, const int maxiters /*= 500*/, const double tol /*= 1e-12*/ )

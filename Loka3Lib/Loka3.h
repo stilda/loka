@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __LOKA3_HEADER__
+#define __LOKA3_HEADER__
 
 #include <string>
 
@@ -65,3 +66,5 @@ namespace Loka3
 	L3 inv( const L3 & n ); // inverse: n*inv(n)=1
 	L3 opp( const L3 & n ); // opposite: n+opp(n)=0
 }
+
+#endif

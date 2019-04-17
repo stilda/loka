@@ -1,7 +1,5 @@
-#pragma once
-
 #include "Loka4.h"
-#include "Vector3.h"
+//#include "Vector3.h"
 #include <vector>
 
 namespace Loka4
@@ -9,9 +7,9 @@ namespace Loka4
 	const double PI = 3.1415926535897932384626433832795;
 
 	const L4 normalize( const L4 & n );
-	Vector3::Vect3d L4_to_vect( const L4 & n );
+//	Vector3::Vect3d L4_to_vect( const L4 & n );
 	// Convert dekart orthogonal coordinates of a point to L4 representation.
-	L4 vect_to_L4( const Vector3::Vect3d & v );
+//	L4 vect_to_L4( const Vector3::Vect3d & v );
 	double exponent_period();
 	bool near_equal( const L4 & n1, const L4 & n2, const double tol = 1e-12 );
 	bool near_zero( const L4 & n1, const double tol = 1e-12 );
